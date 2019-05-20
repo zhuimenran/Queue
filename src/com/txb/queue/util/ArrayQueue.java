@@ -26,13 +26,13 @@ public class ArrayQueue<E> implements Queue<E> {
 	}
 
 	@Override
-	//入队
+	//入队，添加数组尾
 	public void enqueue(E e) {
 		array.addLast(e);
 	}
 
 	@Override
-	//出队
+	//出队，删除数组头
 	public E dequeue() {
 		return array.removeFirst();
 	}

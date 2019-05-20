@@ -22,8 +22,8 @@ public class LinkedListQueue<E> implements Queue<E> {
 		}
 	}
 
-	private Node head;
-	private Node tail;
+	private Node head;//头节点
+	private Node tail;//尾节点
 	private int size;
 	
 	public LinkedListQueue() {
@@ -43,6 +43,9 @@ public class LinkedListQueue<E> implements Queue<E> {
 		return size==0;
 	}
 
+	/**
+	 * 入队，添加在链表尾，tail为尾指针
+	 */
 	@Override
 	public void enqueue(E e) {
 		if(tail == null) {
@@ -54,7 +57,9 @@ public class LinkedListQueue<E> implements Queue<E> {
 		}
 		size++;
 	}
-
+/**
+ * 出队，删除头节点
+ */
 	@Override
 	public E dequeue() {
 		if(isEmpty()) {
